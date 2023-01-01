@@ -15,13 +15,6 @@ html {
   display: flex;
 }
 
-.social {
-  color: black;
-  color: #fff9e5;
-  color: #a51f26;
-  padding-top: 8%;
-}
-
 .main-container {
   width: 60%;
 }
@@ -40,6 +33,13 @@ html {
 .text-link:hover {
   color: gray;
 }
+
+/* .social {
+  color: black;
+  color: #fff9e5;
+  color: #a51f26;
+  padding-top: 8%;
+} */
 
 /*==============================
   RESPONSIVE DESIGN: TABLET
