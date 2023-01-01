@@ -1,5 +1,5 @@
 html {
-  background: #fdf2e0;
+  background: #031520;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -17,28 +17,69 @@ html {
 
 .main-container {
   width: 60%;
+  color: #fdf2e0;
 }
 
-.text {
+/*==============================
+  CIRCLES
+==============================*/
+.meditation {
   text-align: justify;
   /* Scalable with min size of 22px. Used to be 26px. */
   font-size: calc(1.375rem + 0.2vw);
-  font-size: 1rem;
+  /* circle: */
+  border-radius: 50%;
+  width: 120px;
+  /* width: auto; */
+  height: 120px;
+  padding: 50px;
+  background-color: #fdf2e0;
 }
 
-.text-link {
+.meditation:hover {
+  opacity: 50%;
+}
+
+.meditation-link {
   color: black;
 }
 
-.text-link:hover {
+.meditation-link:hover {
   color: gray;
+}
+
+.interval {
+  /* circle: */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  padding: 50px;
+  background-color: teal;
+}
+
+.interval:hover {
+  opacity: 50%;
+}
+
+.warm-up {
+  /* circle: */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  padding: 50px;
+  background-color: #a51f26;
+}
+
+.warm-up:hover {
+  opacity: 50%;
+}
+
+.counters {
+  font-size: 10rem;
 }
 
 /* .social {
   color: black;
-  color: #fff9e5;
-  color: #a51f26;
-  padding-top: 8%;
 } */
 
 /*==============================
