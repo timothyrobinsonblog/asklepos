@@ -32,20 +32,26 @@
   </head>
 
   <body class="container">
-    <main class="main-container">
-
-      You're meditating for XX minutes with XX interval bells and XX seconds warm-up.
-
-      <p></p>
+    <main class="main-container">  
 
       <section class="meditation">        
         <a href="https://www.instagram.com/timothyrobinsonblog/" target="_blank" class="meditation-link"><em><u>meditation</u></em></a>
       </section>
+      <div class="counters">
+        -   +
+        <button onclick="meditationCounter(-5)"> - </button>
+        <button onclick="meditationCounter(5)"> + </button>
+      </div>
 
       <p></p>
 
       <div class="interval">         
         <em><u>interval</u></em>
+      </div>
+      <div class="counters">
+        -   +
+        <button onclick="intervalCounter(-1)"> - </button>
+        <button onclick="intervalCounter(1)"> + </button>
       </div>
 
       <p></p>
@@ -53,12 +59,23 @@
       <div class="warm-up">         
         <em><u>warm-up</u></em>
       </div>
-
       <div class="counters">
         -   +
-      </div>             
+        <button onclick="warmupCounter(-30)"> - </button>
+        <button onclick="warmupCounter(30)"> + </button>
+      </div>        
       
+      <p></p>
+      <div>
+      You're meditating for 
+      <span id="meditationClicks"> 0 </span> minutes with 
+      <span id="intervalClicks"> 0 </span> interval bells and 
+      <span id="totalClicksWarmup"> 0 </span> seconds warm-up.
+      </div>
+
       <!-- <a href="https://www.instagram.com/timothyrobinsonblog/" target="_blank" class="social"><i class="fab fa-instagram"></i></a> -->
+
+
 
     </main>
     <script type="text/javascript" src="js/app.js"></script>
