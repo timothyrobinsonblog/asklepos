@@ -20,6 +20,7 @@ html {
     height: 100vh;
     background-color: orange;
     background-color: white;
+    background: #031520;
 }
 
 /* progress indication */
@@ -69,6 +70,7 @@ html {
     height: 390px;
     background-color: black;
     background-color: white;
+    background: #031520;
     border-radius: 50%;
     z-index: 5;
     /* display: none;  */
