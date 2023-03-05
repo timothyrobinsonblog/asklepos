@@ -2,9 +2,16 @@ const semicircles = document.querySelectorAll('.semicircle');
 const timer = document.querySelector('.timer');
 
 // input
-const hr = 0;
-const min = 0;
-const sec = 10;
+let hr = 0;
+let min = 0;
+let sec = 10;
+
+// why do i have to out this here for the function to be called and work?
+changeMinValue();
+console.log(min);
+function changeMinValue() {
+    min = 1;
+  }
 
 const hours = hr * 3600000;
 const minutes = min * 60000;
@@ -14,7 +21,7 @@ const starTime = Date.now();
 const futureTime = starTime + setTime;
 
 const timerLoop = setInterval(countDownTimer);
-countDownTimer(); 
+countDownTimer();  
 
 function countDownTimer() {
     const currentTime = Date.now();
