@@ -12,7 +12,6 @@ let value = 0;
 let storedMin = localStorage.getItem("someVarKey");
 if (storedMin) {
     min = parseInt(storedMin);
-
 }
 
 // why do i have to out this here for the function to be called and work?
@@ -41,8 +40,12 @@ function getValue() {
     localStorage.setItem("someVarKey", newValue)
 } 
 
-
-
+// function circleOne () {
+//     const changeMinBtn = document.getElementsByClassName('circle-one');
+//     changeMinBtn.addEventListener('click', () => {
+//     circle-one.style.transform = `color: red`;
+//     });
+// }
 
 const hours = hr * 3600000;
 const minutes = min * 60000;
@@ -106,18 +109,33 @@ function countDownTimer() {
         timer.style.color = "lightgray";
     }
 }
+  
+// function opacity(ele) {
+//         ele.style.opacity = '.5'
+//   }
 
-function meditationCounter(click) {
-    const meditationClicks = document.getElementById('meditationClicks');
-    const sumvalue = parseInt(meditationClicks.innerText) + click;
-    console.log(sumvalue + click);
-    meditationClicks.innerText = min;
-    // timer between values 0 - 5 (bells)
-    if(sumvalue < 0) {
-        meditationClicks.innerText = 0;
-    }
-    if(sumvalue > 180) {
-        meditationClicks.innerText = 180;
-    }
-}
+// function meditationCounter(click) {
+//     const meditationClicks = document.getElementById('meditationClicks');
+//     const sumvalue = parseInt(meditationClicks.innerText) + click;
+//     console.log(sumvalue + click);
+//     meditationClicks.innerText = min;
+//     // timer between values 0 - 5 (bells)
+//     if(sumvalue < 0) {
+//         meditationClicks.innerText = 0;
+//     }
+//     if(sumvalue > 180) {
+//         meditationClicks.innerText = 180;
+//     }
+// }
+
+// let img = document.querySelector('.circle-one');
+// let input = document.querySelector('#myNumberInput');
+
+// function formInput () {
+// if (img.style.opacity === '0.5') {
+//   input.removeAttribute('disabled');
+// } else {
+//   input.setAttribute('disabled', true);
+// }
+// }formInput ();
 
