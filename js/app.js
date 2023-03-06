@@ -5,13 +5,44 @@ const timer = document.querySelector('.timer');
 let hr = 0;
 let min = 0;
 let sec = 10;
+let value = 0; 
+
+// localStorage.setItem("someVarKey", min);
+
+let storedMin = localStorage.getItem("someVarKey");
+if (storedMin) {
+    min = parseInt(storedMin);
+
+}
 
 // why do i have to out this here for the function to be called and work?
-changeMinValue();
-console.log(min);
-function changeMinValue() {
-    min = 1;
-  }
+// function setupCounter() {
+// function changeMinValue() {
+//     // min = 1;
+//     console.log(min);
+//     const changeMinBtn = document.getElementById('change-min-btn');
+//     changeMinBtn.addEventListener('click', () => {
+//     min = 10; // or any other value you want to set min to when the button is clicked
+//     console.log(min);
+//     localStorage.setItem("someVarKey", min);
+//   });
+// }
+// changeMinValue();
+// }
+// setupCounter();
+
+// getValue();
+function getValue() {
+    var myNumberInput = document.getElementById("myNumberInput");
+    var newValue = myNumberInput.value;
+    var min = newValue;
+    console.log(newValue);
+    console.log(min);
+    localStorage.setItem("someVarKey", newValue)
+} 
+
+
+
 
 const hours = hr * 3600000;
 const minutes = min * 60000;
@@ -76,13 +107,11 @@ function countDownTimer() {
     }
 }
 
-// meditation settings
-
 function meditationCounter(click) {
     const meditationClicks = document.getElementById('meditationClicks');
     const sumvalue = parseInt(meditationClicks.innerText) + click;
     console.log(sumvalue + click);
-    meditationClicks.innerText = sumvalue;
+    meditationClicks.innerText = min;
     // timer between values 0 - 5 (bells)
     if(sumvalue < 0) {
         meditationClicks.innerText = 0;
@@ -92,32 +121,3 @@ function meditationCounter(click) {
     }
 }
 
-
-function intervalCounter(click) {
-    const intervalClicks = document.getElementById('intervalClicks');
-    const sumvalue = parseInt(intervalClicks.innerText) + click;
-    console.log(sumvalue + click);
-    intervalClicks.innerText = sumvalue;
-    // timer between values 0 - 5 (bells)
-    if(sumvalue < 0) {
-        intervalClicks.innerText = 0;
-    }
-    if(sumvalue > 5) {
-        intervalClicks.innerText = 5;
-    }
-}
-
-
-function warmupCounter(click) {
-    const totalClicksWarmup = document.getElementById('totalClicksWarmup');
-    const sumvalue = parseInt(totalClicksWarmup.innerText) + click;
-    console.log(sumvalue + click);
-    totalClicksWarmup.innerText = sumvalue;
-    // timer between values 0 - 300 (seconds)
-    if(sumvalue < 0) {
-        totalClicksWarmup.innerText = 0;
-    }
-    if(sumvalue > 300) {
-        totalClicksWarmup.innerText = 300;
-    }
-}

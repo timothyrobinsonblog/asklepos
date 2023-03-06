@@ -33,51 +33,44 @@
 
   <body class="container">
     <main class="main-container">  
-
       <section class="meditation">        
         <a href="https://www.instagram.com/timothyrobinsonblog/" target="_blank" class="meditation-link"><em><u>meditation</u></em></a>
+        <a href="https://www.instagram.com/timothyrobinsonblog/" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
+        <input type="number" id="myNumberInput" value="0">
+        <button onclick="getValue()">this is how long im sitting for</button>
       </section>
-      <div class="counters">
-        -   +
-        <button onclick="meditationCounter(-5)"> - </button>
-        <button onclick="meditationCounter(5)"> + </button>
-      </div>
-
-      <p></p>
-
       <div class="interval">         
         <em><u>interval</u></em>
       </div>
-      <div class="counters">
-        -   +
-        <button onclick="intervalCounter(-1)"> - </button>
-        <button onclick="intervalCounter(1)"> + </button>
-      </div>
-
-      <p></p>
-
       <div class="warm-up">         
         <em><u>warm-up</u></em>
       </div>
-      <div class="counters">
-        -   +
-        <button onclick="warmupCounter(-30)"> - </button>
-        <button onclick="warmupCounter(30)"> + </button>
-      </div>        
-      
-      <p></p>
-      <div>
-      You're meditating for 
-      <span id="meditationClicks"> 0 </span> minutes with 
-      <span id="intervalClicks"> 0 </span> interval bells and 
-      <span id="totalClicksWarmup"> 0 </span> seconds warm-up.
-      </div>
-
-      <!-- <a href="https://www.instagram.com/timothyrobinsonblog/" target="_blank" class="social"><i class="fab fa-instagram"></i></a> -->
-
       <p><a href="timer.html" style="color: #fdf2e0; font-size: 20px"><strong>go to timer</strong></a></p>
 
+      <!-- <div class="counters">
+        <button onclick="meditationCounter(1)" id="change-min-btn">+</button>
+        <button onclick="meditationCounter(-1)" id="change2-min-btn">-1</button>
+      </div> -->
+
+      <div class="timer" id="timer"></div>      
+
+      <div>
+        You're meditating for 
+        <span id="meditationClicks"> 0 </span> minutes with 
+        <span id="intervalClicks"> 0 </span> interval bells and 
+        <span id="totalClicksWarmup"> 0 </span> seconds warm-up.
+        </div>
+        <!-- <input type="number" id="meditationTime" name="meditationTime"
+       min="0" max="65"> -->
+
+  
+
+
+   <!-- -   + -->
+   <!-- <button onclick="meditationCounter(-5)"> - </button> -->
     </main>
+    
     <script type="text/javascript" src="js/app.js"></script>
+    
   </body>
 </html>
