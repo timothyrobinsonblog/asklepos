@@ -121,9 +121,9 @@ body {
   padding: 2% 0 2% 0;
   text-align: center;
   color: #fdf2e0;
-    font-family: 'Roboto Mono', monospace;
-    /* font-family: 'Glamour Absolute', regular;
-    color: #DF362D; */
+  font-family: 'Roboto Mono', monospace;
+  /* font-family: 'Glamour Absolute', regular;
+  color: #DF362D; */
 
 }
 
@@ -139,7 +139,7 @@ input[type=number] {
 }
 
 .venn {
-  padding: 4% 15% 3% 20%;
+  padding: 4% 12.5% 3% 22.5%;
 }
 
 /* .circle-one:hover img {

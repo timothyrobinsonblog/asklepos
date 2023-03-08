@@ -26,30 +26,34 @@ body {
 }
 
 .text {
-    color: gray;
-    color: white;
-    font-family: 'Roboto Mono', monospace;
+    /* color: gray; */
+    /* color: white; */
+    color: #fdf2e0;
+    /* font-family: 'Roboto Mono', monospace; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 40%;
     text-align: justify;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 20% 17.5% 0 0;
     padding: 2% 3% 2% 3%;
     float: right;
-    background-color: gray;
-    background-color: #0b2028;
-    background-color: #07151f;
+    /* background-color: gray; */
+    /* background-color: #0b2028; */
+    /* background-color: #07151f; */
     background-color: #003333;
   }
 
-  #coloured-text {
+  /* #coloured-text {
     color: #DF362D;
     font-size: 1.25rem;
     font-family: 'Glamour Absolute', regular;
-  }
+  } */
 
   #coloured-links {
-    color: #DF362D;
-    font-size: 2rem;
+    /* color: #DF362D;
+    color: gray; */
+    color: lightsteelblue;
+    font-size: 1.8rem;
     font-family: 'Glamour Absolute', regular;
   }
   

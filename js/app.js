@@ -4,7 +4,7 @@ const timer = document.querySelector('.timer');
 // input
 let hr = 0;
 let min = 0;
-let sec = 10;
+let sec = 5;
 let value = 0; 
 
 // localStorage.setItem("someVarKey", min);
