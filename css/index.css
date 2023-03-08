@@ -4,6 +4,29 @@ html {
   margin: 0;
   padding: 0;
   padding-bottom: 4vh;
+  background-image: url("../img/noise_v1_3_copy.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  overflow-x: hidden;
+  /* light: */
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: rgb(238,174,202);
+  /* dark: */
+  background-color: #003333;
+  transition: background-color 0.5s ease;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  width: 100%;
+  max-width: 1750px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -11,13 +34,15 @@ html {
   width: 100%;
   max-width: 1500px;
   margin-top: 5vh;
-  font-family: Georgia, "Times New Roman", serif;
+  /* font-family: Georgia, "Times New Roman", serif; */
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
   display: flex;
 }
 
 .main-container {
   width: 60%;
   color: #fdf2e0;
+  padding: 4vh 0 0 0;
 }
 
 /*==============================
@@ -26,14 +51,26 @@ html {
 .meditation {
   text-align: justify;
   /* Scalable with min size of 22px. Used to be 26px. */
-  font-size: calc(1.375rem + 0.2vw);
-  /* circle: */
-  border-radius: 50%;
+  /* font-size: calc(1.375rem + 0.2vw); */
+  /* background-color: #fdf2e0; 
   width: 120px;
+  height: 120px; */
   /* width: auto; */
-  height: 120px;
-  padding: 50px;
-  background-color: #fdf2e0;
+  display:inline-block;
+  padding: 0 3% 0 3%;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  border: 2px solid white;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color: transparent;
+  text-align:center;
+  transition: all 0.2s;
+  font-size: 2rem;
+  
 }
 
 /* .meditation:hover {
@@ -41,50 +78,54 @@ html {
 } */
 
 .meditation-link {
-  color: black;
+  color: #fdf2e0;
+ 
 }
 
 .meditation-link:hover {
   color: gray;
 }
 
-.interval {
-  /* circle: */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  padding: 50px;
-  background-color: teal;
-}
-
-.interval:hover {
-  opacity: 50%;
-}
-
-.warm-up {
-  /* circle: */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  padding: 50px;
-  background-color: #a51f26;
-}
-
-.warm-up:hover {
-  opacity: 50%;
-}
+/*==============================
+  ADDITIONS (most of .meditation [= copy of .change-theme] and .body classes too):
+==============================*/
 
 .counters {
   font-size: 5rem;
+}
+
+.meditation button {
+  background-color: transparent;
+  border: none;
+  
+}
+
+.meditation a {
+  color: #fdf2e0; 
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.meditation a:hover {
+  color: gray;
 }
 
 /* .social {
   color: black;
 } */
 
-/*==============================
-  ADDITIONS
-==============================*/
+.main-text {
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
+  font-size: 1.5rem;
+  padding: 2% 0 2% 0;
+  text-align: center;
+  color: #fdf2e0;
+    font-family: 'Roboto Mono', monospace;
+    /* font-family: 'Glamour Absolute', regular;
+    color: #DF362D; */
+
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -98,7 +139,7 @@ input[type=number] {
 }
 
 .venn {
-  margin: 10% 0 10% 0;
+  padding: 4% 15% 3% 20%;
 }
 
 /* .circle-one:hover img {
@@ -106,38 +147,92 @@ input[type=number] {
 } */
 
 .circle-one {
-   height: 20%;
-   width: 20%;
+   height: 80%;
+   width: 80%;
    /* border: none; */
-  cursor:pointer; 
+  cursor:pointer;
   opacity: 1;
 }
 
+/* .circle-one:hover {
+  opacity: .5;
+} */
+
 .transperent{opacity: 0.5;}
 
-.circle-one img {
-  height: 100%;
-  width: 100%
-}
-
-
+/* .circle-one img {
+} */
 
 .meditation-clicks input {
-  pointer-events:none;
+  /* pointer-events:none; */
   background-color: transparent;
   color: #fdf2e0;
   border: none;
-  width: 20px;
+  width: 35px;
+  font-size: 2rem;
+  /* border-bottom: 4px dotted teal; */
 }
 
 .test-class input {
  pointer-events: all;
 background-color: teal;
 border: none;
-font-size: 20px;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* #intervalClicks {
+} */
+
+.navigation {
+  border-top: 2px solid gray;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+  padding: 3% 0 3% 0;
+}
+
+.change-theme{
+  display:inline-block;
+  padding:0.3em 1.2em;
+  margin:1.5% 0.3em 0.3em 0;
+  border-radius:2em;
+  border: 2px solid white;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color: #fdf2e0; 
+  background-color: transparent;
+  text-align:center;
+  transition: all 0.2s;
+  font-size: 1.25rem;
+  float: right;
+  }
+
+  .change-theme:hover {
+    color: gray;
+    cursor: pointer;
+  }
+
+  /* .button3:hover{
+  background-color:#4095c6;
+  } */
+
+  @media all and (max-width:30em){
+    .change-theme {
+  display:block;
+  margin:0.2em auto;
+  }
+  }
+
+  .navigation img {
+    height: 5%;
+    width: 5%;
+    margin: 0 0 -2% 0;
+  }
+
+.buttons {
+  padding: 0 0 3% 0;
+}
 
 /*==============================
   RESPONSIVE DESIGN: TABLET
@@ -176,4 +271,3 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 0 8% 0 8%;
   }
 }
-

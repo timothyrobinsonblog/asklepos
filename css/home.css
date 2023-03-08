@@ -1,0 +1,58 @@
+html {
+    background: #001440;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 4vh; 
+    background-image: url("../img/noise_v1_3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    /* i like this gradient a lot, but it's too bright for a meditation app:
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 100%;
+    max-width: 1750px;
+    overflow: hidden;
+}
+
+.text {
+    color: gray;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    width: 40%;
+    text-align: justify;
+    font-size: 1rem;
+    margin: 20% 17.5% 0 0;
+    padding: 2% 3% 2% 3%;
+    float: right;
+    background-color: gray;
+    background-color: #0b2028;
+    background-color: #07151f;
+    background-color: #003333;
+  }
+
+  #coloured-text {
+    color: #DF362D;
+    font-size: 1.25rem;
+    font-family: 'Glamour Absolute', regular;
+  }
+
+  #coloured-links {
+    color: #DF362D;
+    font-size: 2rem;
+    font-family: 'Glamour Absolute', regular;
+  }
+  
+  #coloured-links:hover {
+    opacity: 60%;
+  }

@@ -32,20 +32,22 @@
   </head>
 
   <body class="container">
-    <main class="main-container">  
-      <section class="meditation">        
-        <a href="https://www.instagram.com/timothyrobinsonblog/" target="_blank" class="meditation-link"><em><u>meditation</u></em></a>
-        <a href="https://www.instagram.com/timothyrobinsonblog/" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
-        
-        
-      </section>
-      <div class="interval">         
-        <em><u>interval</u></em>
+    <main class="main-container"> 
+      
+      
+      <div class="main-text">
+        You're meditating for 
+        <span class="meditation-clicks">
+        <span id='test' id="meditationClicks"> <input type="number" id="myNumberInput" class="test-form"; value="0"> </span></span>
+        minutes with 
+        <span id="intervalClicks">no</span> interval bells. 
+        <!-- and <span id="totalClicksWarmup"> 0 </span> seconds warm-up. -->
+        </div>
+        <!-- <input type="number" id="meditationTime" name="meditationTime"
+       min="0" max="65"> -->
+        <!-- -   + -->
+        <!-- <button onclick="meditationCounter(-5)"> - </button> -->  
       </div>
-      <div class="warm-up">         
-        <em><u>warm-up</u></em>
-      </div>
-
       <!-- <div class="counters">
         <button onclick="meditationCounter(1)" id="change-min-btn">+</button>
         <button onclick="meditationCounter(-1)" id="change2-min-btn">-1</button>
@@ -53,35 +55,27 @@
       <!-- <div class="timer" id="timer"></div>       -->
       
 <section class="venn">
-  <div>
-    <img src="img/asklepos_test.jpg"  id='test-btn' class="circle-one">
-    <button onclick="getValue()">
-      
-      
-      i want this shape to get bigger or lower opacity or some effect when i click on it and enter numbers, then normal after i submit
-    
-      <p><a href="timer.html" style="color: black; font-size: 20px"><strong>go to timer</strong></a></p>
-    </button>
+  <div id="venn-button">
+    <img src="img/venn-diagram_text.svg"  id='test-btn' class="circle-one">
   </div>
 </section>
 
-      <div>
-        You're meditating for 
-        <span class="meditation-clicks">
-        <span id='test' id="meditationClicks"> <input type="number" id="myNumberInput" class="test-form"; value="0"> </span></span>
-        minutes with 
-        <span id="intervalClicks"> 0 </span> interval bells and 
-        <span id="totalClicksWarmup"> 0 </span> seconds warm-up.
-        </div>
-        <!-- <input type="number" id="meditationTime" name="meditationTime"
-       min="0" max="65"> -->
-        <!-- -   + -->
-        <!-- <button onclick="meditationCounter(-5)"> - </button> -->
+<div class="buttons">
+<section class="meditation">         
+  <button onclick="getValue()">
+    <p><a href="timer.html">begin timer</a></p>
+  </button>
+</section>
+<button onclick="toggleBackground()" class="change-theme">change theme</button>
+</div>
+
+<section class="navigation">
+  designed and built with <img src="img/love.svg"> by
+  <a href="https://www.timothyrobinson.net" target="_blank" class="meditation-link"><em><u>tim robinson</u></em></a>
+  <!-- <a href="https://www.instagram.com/timothyrobinsonblog/" target="_blank" class="social"><i class="fab fa-instagram"></i></a>     -->
+</section>
     </main>
-
     <!-- <button class="button_click">CLICK HERE</button> -->
-    
-
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script>
@@ -112,6 +106,36 @@ document.getElementById('test-btn').addEventListener('click', function() {
     toggleClass(document.getElementById('test'), 'test-class');
 });
     </script>
+
+<!-- <script>
+  $('#venn-button').click(function(){
+       $('#myNumberInput').focus();
+  });
+</script> -->
+
+<script>
+  let isFocused = false;
+  $('#venn-button').click(function(){
+    if (isFocused) {
+      $('#myNumberInput').blur();
+      isFocused = false;
+    } else {
+      $('#myNumberInput').focus();
+      isFocused = true;
+    }
+  });
+</script>
+
+<script>
+  function toggleBackground() {
+    const body = document.querySelector('html');
+    const currentColor = body.style.backgroundColor;
+    const newColor = currentColor === 'rgb(238, 174, 202)' ? '#003333' : 'rgb(238, 174, 202)';
+    body.style.backgroundColor = newColor;
+  }
+</script>
+
+
 
   </script>
     
