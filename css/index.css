@@ -54,7 +54,8 @@ body {
     color: gray; */
     color: lightsteelblue;
     font-size: 1.8rem;
-    font-family: 'Glamour Absolute', regular;
+    /* font-family: 'Glamour Absolute', regular; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
   #coloured-links:hover {
